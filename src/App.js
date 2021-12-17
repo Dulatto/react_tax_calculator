@@ -7,7 +7,9 @@ import Summary from './Views/Summary';
 function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="container bg-white">
+        <h1 className="mt-4 pt-4">Income tax calculator Canada</h1>
+        <h3>Find out how much your salary is after tax</h3>
         <Filters />
         <SalaryRate />
         <Results />
