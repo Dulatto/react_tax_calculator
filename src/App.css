@@ -1,0 +1,12 @@
+.input-group-text {
+  color: #842029;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #842029;
+  box-shadow: none;
+}
+.btn-check:focus + .btn-danger,
+.btn-danger:focus {
+  box-shadow: none;
+}
