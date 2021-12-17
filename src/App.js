@@ -7,10 +7,15 @@ import Summary from './Views/Summary';
 function App() {
   return (
     <div className="App">
-      <div className="container bg-white">
-        <h1 className="mt-4 pt-4">Income tax calculator Canada</h1>
-        <h3>Find out how much your salary is after tax</h3>
-        <Filters />
+      <div className="container">
+        <div className="row  bg-white py-4">
+          <h1 className="mt-4 pt-4">Income tax calculator Canada</h1>
+          <h5>Find out how much your salary is after tax</h5>
+          <div className="col-sm-12">
+            <Filters />
+          </div>
+        </div>
+
         <SalaryRate />
         <Results />
         <Summary />
