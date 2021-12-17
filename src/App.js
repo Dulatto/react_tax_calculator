@@ -7,10 +7,12 @@ import Summary from './Views/Summary';
 function App() {
   return (
     <div className="App">
-      <Filters />
-      <SalaryRate />
-      <Results />
-      <Summary />
+      <div className="container">
+        <Filters />
+        <SalaryRate />
+        <Results />
+        <Summary />
+      </div>
     </div>
   );
 }

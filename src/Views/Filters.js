@@ -2,7 +2,7 @@ import React from 'react';
 
 const Filters = () => {
     return (
-        <div>
+        <div className="text-danger">
             Filter
         </div>
     );
