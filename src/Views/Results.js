@@ -3,7 +3,7 @@ import React from 'react';
 const Results = () => {
     return (
         <div className="row bg-white mt-3 py-4">
-            <h5>Withholding</h5>
+            <h5 className="fw-bold">Withholding</h5>
             <hr />
             <div className="col-md-6">
                 <div className="row">
