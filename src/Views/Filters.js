@@ -1,6 +1,17 @@
 import React from 'react';
+import { provinces, per } from '../data';
 
 const Filters = () => {
+
+    let province = provinces.map(x => {
+        return <option key={x.val}>{x.text}</option>
+    })
+
+    let time = per.map(x => {
+        return <option key={x.val}>{x.text}</option>
+    })
+
+
     return (
         <div className="row mt-4">
             <div className="col-md-3">
@@ -17,9 +28,7 @@ const Filters = () => {
                 <div className="mb-3">
                     <label className="form-label">Per</label>
                     <select className="form-select ">
-                        <option>Small select</option>
-                        <option>Small select</option>
-                        <option>Small select</option>
+                        {time}
                     </select>
 
                 </div>
@@ -28,9 +37,7 @@ const Filters = () => {
                 <div className="mb-3">
                     <label className="form-label">Where do you work?</label>
                     <select className="form-select ">
-                        <option>Small select</option>
-                        <option>Small select</option>
-                        <option>Small select</option>
+                        {province}
                     </select>
 
                 </div>
