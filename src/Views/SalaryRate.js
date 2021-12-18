@@ -2,7 +2,7 @@ import React from 'react';
 
 const SalaryRate = () => {
     return (
-        <div>
+        <div className="mt-5 bg-white ">
             Salary
         </div>
     );

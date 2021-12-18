@@ -15,10 +15,11 @@ function App() {
             <Filters />
           </div>
         </div>
-
-        <SalaryRate />
-        <Results />
-        <Summary />
+        <div className="row">
+          <SalaryRate />
+          <Results />
+          <Summary />
+        </div>
       </div>
     </div>
   );
