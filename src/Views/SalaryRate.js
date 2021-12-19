@@ -10,13 +10,13 @@ const SalaryRate = () => {
     }
 
     let period = per.map((x) => {
-        return <div className="col-md-2"><button className="btn btn-light btn-sm"
+        return <div className="col-md-2"><button className={`btn btn-light btn-sm ${state.timePeriod == x.val ? "active" : ""}`}
             value={x.val} onClick={handleButtonValue}>{x.text}</button></div>
     })
 
     return (
         <div className="row mt-3 bg-white py-4">
-            <div className="col-md-3">Salary rate </div>
+            <div className="col-md-3 fw-bold">Salary rate </div>
             <div className="col-md-9">
                 <div className="row">
                     {period}

@@ -5,7 +5,7 @@ import { provinces, per } from '../data';
 const Filters = () => {
     const [state, setState] = useStore();
 
-    console.log('pose', state.position)
+    // console.log('pose', state.position)
 
     let province = provinces.map((x, index) => {
         return <option key={index} value={x.val}>{x.text}</option>

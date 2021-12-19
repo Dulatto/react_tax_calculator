@@ -10,3 +10,16 @@
 .btn-danger:focus {
   box-shadow: none;
 }
+
+.active {
+  color: #fff !important;
+  background-color: #842029 !important;
+  border-color: #842029 !important;
+}
+.btn-check:active + .btn-light:focus,
+.btn-check:checked + .btn-light:focus,
+.btn-light.active:focus,
+.btn-light:active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(132 32 41 / 50%) !important;
+}
