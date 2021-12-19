@@ -7,6 +7,8 @@ const appState = {
     income: null,
     position: 8,
     time: 0,
+    timePeriod: 0,
+
     //...add your state
 };
 

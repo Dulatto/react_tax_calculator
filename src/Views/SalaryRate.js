@@ -5,8 +5,13 @@ import { per } from '../data';
 const SalaryRate = () => {
     const [state, setState] = useStore();
 
+    const handleButtonValue = (e) => {
+        setState(old => ({ ...old, timePeriod: e.target.value }));
+    }
+
     let period = per.map((x) => {
-        return <div className="col-md-2"><button className="btn btn-light btn-sm" value={x.val}>{x.text}</button></div>
+        return <div className="col-md-2"><button className="btn btn-light btn-sm"
+            value={x.val} onClick={handleButtonValue}>{x.text}</button></div>
     })
 
     return (
