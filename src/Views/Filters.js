@@ -1,15 +1,24 @@
 import React from 'react';
+import { useStore } from '../store';
 import { provinces, per } from '../data';
 
 const Filters = () => {
+    const [state, setState] = useStore();
 
-    let province = provinces.map(x => {
-        return <option key={x.val}>{x.text}</option>
+    console.log('pose', state.position)
+
+    let province = provinces.map((x, index) => {
+        return <option key={index} value={x.val}>{x.text}</option>
     })
 
-    let time = per.map(x => {
-        return <option key={x.val}>{x.text}</option>
+    let time = per.map((x, index) => {
+        return <option key={index} value={x.val}>{x.text}</option>
     })
+
+    const handleProvinceChange = (e) => {
+        setState(old => ({ ...old, position: e.target.value }));
+
+    }
 
 
     return (
@@ -36,7 +45,7 @@ const Filters = () => {
             <div className="col-md-3">
                 <div className="mb-3">
                     <label className="form-label">Where do you work?</label>
-                    <select className="form-select ">
+                    <select className="form-select " value={state.position} onChange={handleProvinceChange}>
                         {province}
                     </select>
 

@@ -1,10 +1,13 @@
 import './App.css';
+import { useStore } from './store';
 import Filters from './Views/Filters';
 import Results from './Views/Results';
 import SalaryRate from './Views/SalaryRate';
 import Summary from './Views/Summary';
 
-function App() {
+const App = () => {
+  const [state, setState] = useStore();
+
   return (
     <div className="App">
       <div className="container">

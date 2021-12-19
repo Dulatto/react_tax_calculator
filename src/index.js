@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { appState, StoreProvider } from './store';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StoreProvider initialValue={appState}>
     <App />
-  </React.StrictMode>,
+  </StoreProvider>,
   document.getElementById('root')
 );
 
