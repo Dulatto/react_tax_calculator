@@ -1,7 +1,9 @@
 import React from 'react';
+import { useStore } from '../store';
 import { PieChart } from 'react-minimal-pie-chart';
 
 const Results = () => {
+    const [state, setState] = useStore();
 
     const shiftSize = 2;
     const defaultLabelStyle = {
