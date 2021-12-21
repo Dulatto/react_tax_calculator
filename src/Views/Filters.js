@@ -32,7 +32,7 @@ const Filters = () => {
                     <label className="form-label">Enter your gross income</label>
                     <div className="input-group mb-3">
                         <span className="input-group-text"><i className="fas fa-money-bill-wave"></i></span>
-                        <input type="text" className="form-control" value={state.income} onChange={handleIncome} />
+                        <input type="text" className="form-control text-end" value={state.income} onChange={handleIncome} />
                     </div>
 
                 </div>
