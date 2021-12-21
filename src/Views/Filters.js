@@ -29,7 +29,7 @@ const Filters = () => {
         <div className="row mt-4">
             <div className="col-md-3">
                 <div className="mb-3">
-                    <label className="form-label">Enter your gross income</label>
+                    <label className="form-label fw-bold">Enter your gross income</label>
                     <div className="input-group mb-3">
                         <span className="input-group-text"><i className="fas fa-money-bill-wave"></i></span>
                         <input type="text" className="form-control text-end" value={state.income} onChange={handleIncome} />
@@ -39,7 +39,7 @@ const Filters = () => {
             </div>
             <div className="col-md-3">
                 <div className="mb-3">
-                    <label className="form-label">Per</label>
+                    <label className="form-label fw-bold">Per</label>
                     <select className="form-select " value={state.time} onChange={handleTimeChange}>
                         {time}
                     </select>
@@ -48,7 +48,7 @@ const Filters = () => {
             </div>
             <div className="col-md-3">
                 <div className="mb-3">
-                    <label className="form-label">Where do you work?</label>
+                    <label className="form-label fw-bold">Where do you work?</label>
                     <select className="form-select " value={state.position} onChange={handleProvinceChange}>
                         {province}
                     </select>
