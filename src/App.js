@@ -18,7 +18,7 @@ const App = () => {
             <Filters />
           </div>
         </div>
-        <SalaryRate />
+        {/* <SalaryRate /> */}
         <Results />
         <Summary />
 

@@ -26,7 +26,8 @@ const Filters = () => {
     }
 
     const calculate = () => {
-        setState(old => ({ ...old, timePeriod: state.time }));
+
+
     }
 
     return (
