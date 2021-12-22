@@ -25,6 +25,10 @@ const Filters = () => {
         setState(old => ({ ...old, income: e.target.value }));
     }
 
+    const calculate = () => {
+        setState(old => ({ ...old, timePeriod: state.time }));
+    }
+
     return (
         <div className="row mt-4">
             <div className="col-md-3">
@@ -57,7 +61,7 @@ const Filters = () => {
             </div>
             <div className="col-md-3 pt-2">
                 <div className="mt-4">
-                    <button type="button" className="btn btn-danger">Calculate</button>
+                    <button type="button" className="btn btn-danger" onClick={calculate}>Calculate</button>
                 </div>
             </div>
         </div>
