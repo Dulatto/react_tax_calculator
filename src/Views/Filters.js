@@ -26,7 +26,13 @@ const Filters = () => {
     }
 
     const calculate = () => {
-
+        let calculateAnnual;
+        if (state.time === '0') {
+            calculateAnnual = state.income;
+        } else if (state.time === '1') {
+            calculateAnnual = state.income * 12;
+        }
+        setState(old => ({ ...old, annual: calculateAnnual }));
 
     }
 

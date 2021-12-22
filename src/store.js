@@ -4,10 +4,11 @@ const [StoreProvider, useStore] = makeStore();
 
 //  main app state
 const appState = {
-    income: 52000,
+    income: 0,
     position: 8,
     time: 0,
-    timePeriod: 0,
+    annual: 0,
+    // timePeriod: 0,
 
     //...add your state
 };
