@@ -17,7 +17,7 @@ const Results = () => {
             <div className="col-md-6">
                 <div className="row">
                     <div className="col-md-8 fw-bold">Salary</div>
-                    <div className="col-md-4 fw-bold text-end">$26.67</div>
+                    <div className="col-md-4 fw-bold text-end">${state.salary}</div>
                     <div className="col-md-8">Federal tax deduction</div>
                     <div className="col-md-4 text-end">$26.67</div>
                     <div className="col-md-8">Provincial tax deduction</div>

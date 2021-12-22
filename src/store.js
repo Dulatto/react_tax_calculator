@@ -8,6 +8,7 @@ const appState = {
     position: 8,
     time: 0,
     annual: 0,
+    salary: 0,
     // timePeriod: 0,
 
     //...add your state
