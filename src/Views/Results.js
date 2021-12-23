@@ -12,7 +12,7 @@ const Results = () => {
     };
     return (
         <div className="row  mt-1 py-2">
-            <div className="col-md-5 me-4 bg-white ">
+            <div className="col-md-5 bg-white ">
                 <h5 className="fw-bold mt-2">Withholding</h5>
                 <hr />
                 <div className="row">
@@ -48,7 +48,7 @@ const Results = () => {
 
                 </div>
             </div>
-            <div className="col-md-6 ms-5 bg-white">
+            <div className="col-md-7 region bg-white">
                 <h5 className="fw-bold mt-2">Tax per region</h5>
                 <hr />
             </div>

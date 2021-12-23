@@ -23,3 +23,6 @@
 .show > .btn-light.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgb(132 32 41 / 50%) !important;
 }
+.region {
+  border-left: 5px solid #f6f6f9;
+}
