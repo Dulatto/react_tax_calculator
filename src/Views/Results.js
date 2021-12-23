@@ -11,10 +11,10 @@ const Results = () => {
         fill: '#fff',
     };
     return (
-        <div className="row bg-white mt-3 py-4">
-            <h5 className="fw-bold">Withholding</h5>
-            <hr />
-            <div className="col-md-6">
+        <div className="row  mt-1 py-2">
+            <div className="col-md-5 me-4 bg-white ">
+                <h5 className="fw-bold mt-2">Withholding</h5>
+                <hr />
                 <div className="row">
                     <div className="col-md-8 fw-bold">Salary</div>
                     <div className="col-md-4 fw-bold text-end">${state.salary}</div>
@@ -31,30 +31,26 @@ const Results = () => {
                     <div className="col-md-4 fw-bold text-end">$26.67</div>
                     <div className="col-md-8 fw-bold">Net pay</div>
                     <div className="col-md-4 fw-bold mb-2 text-end">$26.67</div>
-                    <hr />
-                    <div className="col-md-8">EI deduction</div>
-                    <div className="col-md-4 mb-2 text-end">$26.67</div>
-                    <hr />
-                    <div className="col-md-8">Marginal tax rate</div>
-                    <div className="col-md-4 text-end">$26.67</div>
-                    <div className="col-md-8">Average tax rate</div>
-                    <div className="col-md-4 mb-2 text-end">$26.67</div>
+
+                    <PieChart
+                        data={[
+                            { title: 'Total tax', value: 65, color: '#842029' },
+                            { title: 'Net pay', value: 35, color: '#dc3545' },
+                        ]}
+                        radius={PieChart.defaultProps.radius - 20}
+                        segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
+                        label={({ dataEntry }) => dataEntry.title + ' ' + dataEntry.value + '' + '%'}
+                        labelStyle={{
+                            ...defaultLabelStyle,
+                        }}
+                        style={{ height: '400px' }}
+                    />;
+
                 </div>
             </div>
-            <div className="col-md-6">
-                <PieChart
-                    data={[
-                        { title: 'Total tax', value: 65, color: '#842029' },
-                        { title: 'Net pay', value: 35, color: '#dc3545' },
-                    ]}
-                    radius={PieChart.defaultProps.radius - 20}
-                    segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
-                    label={({ dataEntry }) => dataEntry.title + ' ' + dataEntry.value + '' + '%'}
-                    labelStyle={{
-                        ...defaultLabelStyle,
-                    }}
-                    style={{ height: '400px' }}
-                />;
+            <div className="col-md-6 ms-5 bg-white">
+                <h5 className="fw-bold mt-2">Tax per region</h5>
+                <hr />
             </div>
         </div>
     );

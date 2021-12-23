@@ -9,6 +9,10 @@ const appState = {
     time: 0,
     annual: 0,
     salary: 0,
+    fedTax: 0,
+    provTax: 0,
+    cppDeduction: 0,
+    eiDeduction: 0
     // timePeriod: 0,
 
     //...add your state
