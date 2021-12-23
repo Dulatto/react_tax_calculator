@@ -42,7 +42,16 @@ const Filters = () => {
             calculateAnnual = state.income * 1950;
         }
         setState(old => ({ ...old, annual: calculateAnnual }));
-
+        let federal;
+        let province;
+        if (state.annual <= 49000) {
+            if (state.position === '0') {
+                federal = 9.48 * Number(state.income) / 100;
+                province = 5.38 * Number(state.income) / 100;
+            }
+        }
+        setState(old => ({ ...old, fedTax: federal }));
+        setState(old => ({ ...old, provTax: province }));
     }
 
     return (
@@ -77,7 +86,7 @@ const Filters = () => {
             </div>
             <div className="col-md-3 pt-2">
                 <div className="mt-4">
-                    <button type="button" className="btn btn-danger" onClick={calculate}>Calculate</button>
+                    <button type="button" className="btn btn-danger" onClick={calculate} disabled={state.income == 0}>Calculate</button>
                 </div>
             </div>
         </div>
