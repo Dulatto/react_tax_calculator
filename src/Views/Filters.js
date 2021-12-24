@@ -43,23 +43,23 @@ const Filters = () => {
             calculateAnnual = state.income * 1950;
         }
         setState(old => ({ ...old, annual: calculateAnnual }));
+
         let federal;
         let province;
         let cpp;
         let ei;
         if (state.annual <= 49000) {
             if (state.position === '0') {
-
                 federal = 9.48 * Number(state.income) / 100;
                 province = 5.38 * Number(state.income) / 100;
                 cpp = 5.06 * Number(state.income) / 100;
                 ei = 1.58 * Number(state.income) / 100;
             }
         }
-        setState(old => ({ ...old, fedTax: federal }));
-        setState(old => ({ ...old, provTax: province }));
-        setState(old => ({ ...old, cppDeduction: cpp }));
-        setState(old => ({ ...old, eiDeduction: ei }));
+        setState(old => ({ ...old, fedTax: federal.toFixed(0) }));
+        setState(old => ({ ...old, provTax: province.toFixed(0) }));
+        setState(old => ({ ...old, cppDeduction: cpp.toFixed(0) }));
+        setState(old => ({ ...old, eiDeduction: ei.toFixed(0) }));
     }
 
     return (
