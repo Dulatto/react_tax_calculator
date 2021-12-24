@@ -29,7 +29,7 @@ const Filters = () => {
 
         setState(old => ({ ...old, salary: state.income }));
         let calculateAnnual;
-        if (state.time === '0') {
+        if (state.time === '0' || state.time === 0) {
             calculateAnnual = state.income;
         } else if (state.time === '1') {
             calculateAnnual = state.income * 12;
@@ -49,7 +49,7 @@ const Filters = () => {
         let cpp;
         let ei;
         if (state.annual <= 49000) {
-            if (state.position === '0') {
+            if (state.position === '0' || state.position === 0) {
                 federal = 9.48 * Number(state.income) / 100;
                 province = 5.38 * Number(state.income) / 100;
                 cpp = 5.06 * Number(state.income) / 100;
