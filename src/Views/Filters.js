@@ -78,6 +78,8 @@ const Filters = () => {
         setState(old => ({ ...old, eiDeduction: ei.toFixed(0) }));
     }
 
+
+
     return (
         <div className="row mt-4">
             <div className="col-md-3">
