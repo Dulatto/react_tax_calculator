@@ -56,7 +56,7 @@ const Filters = () => {
                 ei = 1.58 * Number(state.income) / 100;
             }
         }
-        if (state.annual > 49000 && state.annual > 98020) {
+        if (state.annual > 49000 && state.annual <= 98020) {
             if (state.position === '0' || state.position === 0) {
                 federal = 14.88 * Number(state.income) / 100;
                 province = 7.6 * Number(state.income) / 100;
@@ -64,7 +64,7 @@ const Filters = () => {
                 ei = 0.9 * Number(state.income) / 100;
             }
         }
-        if (state.annual > 98021 && state.annual > 152000) {
+        if (state.annual > 98021 && state.annual <= 152000) {
             if (state.position === '0' || state.position === 0) {
                 federal = 18.82 * Number(state.income) / 100;
                 province = 8.7 * Number(state.income) / 100;
