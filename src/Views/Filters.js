@@ -48,12 +48,18 @@ const Filters = () => {
         let province;
         let cpp;
         let ei;
+        let nalog;
+        let plata;
         if (state.annual <= 49000) {
             if (state.position === '0' || state.position === 0) {
                 federal = 9.48 * Number(state.income) / 100;
                 province = 5.38 * Number(state.income) / 100;
                 cpp = 5.06 * Number(state.income) / 100;
                 ei = 1.58 * Number(state.income) / 100;
+
+                nalog = Number(21.5);
+                plata = 100 - Number(nalog);
+
             }
         }
         if (state.annual > 49000 && state.annual <= 98020) {
@@ -76,6 +82,8 @@ const Filters = () => {
         setState(old => ({ ...old, provTax: province.toFixed(0) }));
         setState(old => ({ ...old, cppDeduction: cpp.toFixed(0) }));
         setState(old => ({ ...old, eiDeduction: ei.toFixed(0) }));
+        setState(old => ({ ...old, totalTax: nalog.toFixed(1) }));
+        setState(old => ({ ...old, netPay: plata.toFixed(1) }));
     }
 
 

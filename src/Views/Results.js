@@ -4,8 +4,7 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 const Results = () => {
     const [state, setState] = useStore();
-    const [totalTax, settotalTax] = useState();
-    const [payPercent, setpayPercent] = useState();
+
 
     const data = [
         { title: 'Total tax', value: 35, color: '#842029' },
@@ -16,26 +15,6 @@ const Results = () => {
 
     const total = Number(state.fedTax) + Number(state.provTax) + Number(state.cppDeduction) + Number(state.eiDeduction);
     const pay = Number(state.salary) - Number(total);
-
-
-    // const diagraData = () => {
-    //     if (state.fedTax > 0) {
-    //         let nalog;
-    //         let plata;
-    //         if (state.annual <= 49000) {
-    //             if (state.position === '0' || state.position === 0) {
-    //                 nalog = Number(21.5);
-    //                 plata = 100 - Number(nalog);
-    //             }
-    //         }
-    //         settotalTax(nalog);
-    //         setpayPercent(plata);
-    //     }
-    //     diagraData();
-    // }
-
-
-
 
     const shiftSize = 2;
     const defaultLabelStyle = {
