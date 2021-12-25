@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStore } from '../store';
 import { PieChart } from 'react-minimal-pie-chart';
 
 const Results = () => {
     const [state, setState] = useStore();
+    const [totalTax, settotalTax] = useState();
+    const [payPercent, setpayPercent] = useState();
 
-    const totalTax = Number(state.fedTax) + Number(state.provTax) + Number(state.cppDeduction) + Number(state.eiDeduction);
-    const netPay = Number(state.salary) - Number(totalTax);
-    console.log(totalTax, 'total');
+    const data = [
+        { title: 'Total tax', value: 35, color: '#842029' },
+        { title: 'Net pay', value: 65, color: '#dc3545' },
+    ]
+
+
+
+    const total = Number(state.fedTax) + Number(state.provTax) + Number(state.cppDeduction) + Number(state.eiDeduction);
+    const pay = Number(state.salary) - Number(total);
+
+
+    // const diagraData = () => {
+    //     if (state.fedTax > 0) {
+    //         let nalog;
+    //         let plata;
+    //         if (state.annual <= 49000) {
+    //             if (state.position === '0' || state.position === 0) {
+    //                 nalog = Number(21.5);
+    //                 plata = 100 - Number(nalog);
+    //             }
+    //         }
+    //         settotalTax(nalog);
+    //         setpayPercent(plata);
+    //     }
+    //     diagraData();
+    // }
+
+
+
 
     const shiftSize = 2;
     const defaultLabelStyle = {
@@ -32,16 +60,13 @@ const Results = () => {
                     <div className="col-md-4 mb-2 text-end">- ${state.eiDeduction}</div>
                     <hr />
                     <div className="col-md-8 fw-bold">Total tax</div>
-                    <div className="col-md-4 fw-bold text-end">- ${totalTax}</div>
+                    <div className="col-md-4 fw-bold text-end">- ${total}</div>
                     <div className="col-md-8 fw-bold">Net pay</div>
-                    <div className="col-md-4 fw-bold mb-2 text-end">- ${netPay}</div>
+                    <div className="col-md-4 fw-bold mb-2 text-end">${pay}</div>
 
                     {state.fedTax > 0 ?
                         <PieChart
-                            data={[
-                                { title: 'Total tax', value: 35, color: '#842029' },
-                                { title: 'Net pay', value: 65, color: '#dc3545' },
-                            ]}
+                            data={data}
                             radius={PieChart.defaultProps.radius - 20}
                             segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
                             label={({ dataEntry }) => dataEntry.title + ' ' + dataEntry.value + '' + '%'}

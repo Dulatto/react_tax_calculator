@@ -12,7 +12,9 @@ const appState = {
     fedTax: 0,
     provTax: 0,
     cppDeduction: 0,
-    eiDeduction: 0
+    eiDeduction: 0,
+    totalTax: 0,
+    netPay: 0,
     // timePeriod: 0,
 
     //...add your state
