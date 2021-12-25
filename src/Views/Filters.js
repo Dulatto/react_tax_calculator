@@ -56,6 +56,14 @@ const Filters = () => {
                 ei = 1.58 * Number(state.income) / 100;
             }
         }
+        if (state.annual > 49000 && state.annual > 98020) {
+            if (state.position === '0' || state.position === 0) {
+                federal = 14.88 * Number(state.income) / 100;
+                province = 7.6 * Number(state.income) / 100;
+                cpp = 3.23 * Number(state.income) / 100;
+                ei = 0.9 * Number(state.income) / 100;
+            }
+        }
         setState(old => ({ ...old, fedTax: federal.toFixed(0) }));
         setState(old => ({ ...old, provTax: province.toFixed(0) }));
         setState(old => ({ ...old, cppDeduction: cpp.toFixed(0) }));
