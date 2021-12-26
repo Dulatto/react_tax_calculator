@@ -35,10 +35,23 @@ const Results = () => {
                     <div className="col-md-4 text-end">- ${state.fedTax}</div>
                     <div className="col-md-8">Provincial tax deduction</div>
                     <div className="col-md-4 text-end">- ${state.provTax}</div>
-                    <div className="col-md-8">CPP deduction</div>
-                    <div className="col-md-4 text-end">- ${state.cppDeduction}</div>
+                    {state.position !== '8' ? (
+                        <>
+                            <div className="col-md-8">CPP deduction</div>
+                            <div className="col-md-4 text-end">- ${state.cppDeduction}</div>
+                        </>
+                    ) : null}
+
                     <div className="col-md-8">EI deduction</div>
                     <div className="col-md-4 mb-2 text-end">- ${state.eiDeduction}</div>
+                    {state.position === '8' ? (
+                        <>
+                            <div className="col-md-8" title='Quebec Pension Plan'>QPP</div>
+                            <div className="col-md-4 text-end">- ${state.qpp}</div>
+                            <div className="col-md-8" title='Quebec Parental Insurance Plan'>QPIP</div>
+                            <div className="col-md-4 text-end">- ${state.qpip}</div>
+                        </>
+                    ) : null}
                     <hr />
                     <div className="col-md-8 fw-bold">Total tax</div>
                     <div className="col-md-4 fw-bold text-end">- ${total}</div>

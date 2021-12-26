@@ -15,6 +15,8 @@ const appState = {
     eiDeduction: 0,
     totalTax: 0,
     netPay: 0,
+    qpp: 0,
+    qpip: 0,
     // timePeriod: 0,
 
     //...add your state
