@@ -5,10 +5,12 @@ import { PieChart } from 'react-minimal-pie-chart';
 const Results = () => {
     const [state, setState] = useStore();
 
+    const taxes = Number(state.totalTax);
+    const pays = Number(state.netPay);
 
     const data = [
-        { title: 'Total tax', value: 35, color: '#842029' },
-        { title: 'Net pay', value: 65, color: '#dc3545' },
+        { title: 'Total tax', value: taxes, color: '#842029' },
+        { title: 'Net pay', value: pays, color: '#dc3545' },
     ]
 
 
