@@ -58,6 +58,8 @@ const Filters = () => {
                 province = 5.38 * Number(state.income) / 100;
                 cpp = 5.06 * Number(state.income) / 100;
                 ei = 1.58 * Number(state.income) / 100;
+                quebec = Number(0);
+                pension = Number(0);
 
                 nalog = Number(21.5);
                 plata = 100 - Number(nalog);
@@ -81,9 +83,22 @@ const Filters = () => {
                 province = 7.6 * Number(state.income) / 100;
                 cpp = 3.23 * Number(state.income) / 100;
                 ei = 0.9 * Number(state.income) / 100;
-
+                quebec = Number(0);
+                pension = Number(0);
                 nalog = Number(26.61);
                 plata = 100 - Number(nalog);
+
+            } else if (state.position === '8') {
+                federal = 12.37 * Number(state.income) / 100;
+                province = 15.31 * Number(state.income) / 100;
+                ei = 0.68 * Number(state.income) / 100;
+                quebec = 3.5 * Number(state.income) / 100;
+                pension = 0.42 * Number(state.income) / 100;
+                cpp = Number(0);
+
+                nalog = Number(32.3);
+                plata = 100 - Number(nalog);
+
             }
         }
         if (calculateAnnual > 98020 && calculateAnnual <= 152020) {
@@ -92,7 +107,8 @@ const Filters = () => {
                 province = 8.7 * Number(state.income) / 100;
                 cpp = 2.08 * Number(state.income) / 100;
                 ei = 0.58 * Number(state.income) / 100;
-
+                quebec = Number(0);
+                pension = Number(0);
                 nalog = Number(30.18);
                 plata = 100 - Number(nalog);
             }
@@ -104,7 +120,8 @@ const Filters = () => {
                 province = 11.12 * Number(state.income) / 100;
                 cpp = 1.05 * Number(state.income) / 100;
                 ei = 0.29 * Number(state.income) / 100;
-
+                quebec = Number(0);
+                pension = Number(0);
                 nalog = Number(37.42);
                 plata = 100 - Number(nalog);
             }
