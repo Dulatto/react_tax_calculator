@@ -71,7 +71,6 @@ const Filters = () => {
                 quebec = 5.48 * Number(state.income) / 100;
                 pension = 0.49 * Number(state.income) / 100;
                 cpp = Number(0);
-
                 nalog = Number(25.1);
                 plata = 100 - Number(nalog);
 
@@ -111,6 +110,41 @@ const Filters = () => {
                 pension = Number(0);
                 nalog = Number(30.18);
                 plata = 100 - Number(nalog);
+            } else if (state.position === '8') {
+                federal = 15.68 * Number(state.income) / 100;
+                province = 18.87 * Number(state.income) / 100;
+                ei = 0.43 * Number(state.income) / 100;
+                quebec = 2.25 * Number(state.income) / 100;
+                pension = 0.27 * Number(state.income) / 100;
+                cpp = Number(0);
+
+                nalog = Number(37.5);
+                plata = 100 - Number(nalog);
+
+            }
+        }
+
+        if (calculateAnnual > 152000 && calculateAnnual <= 216000) {
+            if (state.position === '0' || state.position === 0) {
+                federal = 22.06 * Number(state.income) / 100;
+                province = 10.03 * Number(state.income) / 100;
+                cpp = 1.46 * Number(state.income) / 100;
+                ei = 0.41 * Number(state.income) / 100;
+                quebec = Number(0);
+                pension = Number(0);
+                nalog = Number(34.0);
+                plata = 100 - Number(nalog);
+            } else if (state.position === '8') {
+                federal = 18.40 * Number(state.income) / 100;
+                province = 20.91 * Number(state.income) / 100;
+                ei = 0.31 * Number(state.income) / 100;
+                quebec = 1.59 * Number(state.income) / 100;
+                pension = 0.19 * Number(state.income) / 100;
+                cpp = Number(0);
+
+                nalog = Number(41.4);
+                plata = 100 - Number(nalog);
+
             }
         }
 
@@ -124,6 +158,17 @@ const Filters = () => {
                 pension = Number(0);
                 nalog = Number(37.42);
                 plata = 100 - Number(nalog);
+            } else if (state.position === '8') {
+                federal = 21.77 * Number(state.income) / 100;
+                province = 22.76 * Number(state.income) / 100;
+                ei = 0.19 * Number(state.income) / 100;
+                quebec = 0.98 * Number(state.income) / 100;
+                pension = 0.12 * Number(state.income) / 100;
+                cpp = Number(0);
+
+                nalog = Number(45.8);
+                plata = 100 - Number(nalog);
+
             }
         }
         setState(old => ({ ...old, fedTax: federal.toFixed(0) }));
