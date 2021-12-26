@@ -9,7 +9,7 @@ const Results = () => {
     const pays = Number(state.netPay);
 
     const data = [
-        { title: 'Total tax', value: taxes, color: '#842029' },
+        { title: 'Tax', value: taxes, color: '#842029' },
         { title: 'Net pay', value: pays, color: '#dc3545' },
     ]
 

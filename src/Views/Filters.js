@@ -30,17 +30,17 @@ const Filters = () => {
         setState(old => ({ ...old, salary: state.income }));
         let calculateAnnual;
         if (state.time === '0' || state.time === 0) {
-            calculateAnnual = state.income;
+            calculateAnnual = Number(state.income);
         } else if (state.time === '1') {
-            calculateAnnual = state.income * 12;
+            calculateAnnual = Number(state.income) * 12;
         } else if (state.time === '2') {
-            calculateAnnual = state.income * 26;
+            calculateAnnual = Number(state.income) * 26;
         } else if (state.time === '3') {
-            calculateAnnual = state.income * 52;
+            calculateAnnual = Number(state.income) * 52;
         } else if (state.time === '4') {
-            calculateAnnual = state.income * 260;
+            calculateAnnual = Number(state.income) * 260;
         } else if (state.time === '5') {
-            calculateAnnual = state.income * 1950;
+            calculateAnnual = Number(state.income) * 1950;
         }
         setState(old => ({ ...old, annual: calculateAnnual }));
 
@@ -50,7 +50,7 @@ const Filters = () => {
         let ei;
         let nalog;
         let plata;
-        if (state.annual <= 49000) {
+        if (calculateAnnual <= 49000) {
             if (state.position === '0' || state.position === 0) {
                 federal = 9.48 * Number(state.income) / 100;
                 province = 5.38 * Number(state.income) / 100;
@@ -62,7 +62,7 @@ const Filters = () => {
 
             }
         }
-        if (state.annual > 49000 && state.annual <= 98020) {
+        if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
                 federal = 14.88 * Number(state.income) / 100;
                 province = 7.6 * Number(state.income) / 100;
@@ -73,7 +73,7 @@ const Filters = () => {
                 plata = 100 - Number(nalog);
             }
         }
-        if (state.annual > 98020 && state.annual <= 152020) {
+        if (calculateAnnual > 98020 && calculateAnnual <= 152020) {
             if (state.position === '0' || state.position === 0) {
                 federal = 18.82 * Number(state.income) / 100;
                 province = 8.7 * Number(state.income) / 100;
@@ -85,7 +85,7 @@ const Filters = () => {
             }
         }
 
-        if (state.annual > 216000) {
+        if (calculateAnnual > 216000) {
             if (state.position === '0' || state.position === 0) {
                 federal = 24.96 * Number(state.income) / 100;
                 province = 11.12 * Number(state.income) / 100;
