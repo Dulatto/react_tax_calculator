@@ -68,14 +68,32 @@ const Filters = () => {
                 province = 7.6 * Number(state.income) / 100;
                 cpp = 3.23 * Number(state.income) / 100;
                 ei = 0.9 * Number(state.income) / 100;
+
+                nalog = Number(26.61);
+                plata = 100 - Number(nalog);
             }
         }
-        if (state.annual > 98021 && state.annual <= 152000) {
+        if (state.annual > 98020 && state.annual <= 152020) {
             if (state.position === '0' || state.position === 0) {
                 federal = 18.82 * Number(state.income) / 100;
                 province = 8.7 * Number(state.income) / 100;
                 cpp = 2.08 * Number(state.income) / 100;
                 ei = 0.58 * Number(state.income) / 100;
+
+                nalog = Number(30.18);
+                plata = 100 - Number(nalog);
+            }
+        }
+
+        if (state.annual > 216000) {
+            if (state.position === '0' || state.position === 0) {
+                federal = 24.96 * Number(state.income) / 100;
+                province = 11.12 * Number(state.income) / 100;
+                cpp = 1.05 * Number(state.income) / 100;
+                ei = 0.29 * Number(state.income) / 100;
+
+                nalog = Number(37.42);
+                plata = 100 - Number(nalog);
             }
         }
         setState(old => ({ ...old, fedTax: federal.toFixed(0) }));
