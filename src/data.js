@@ -19,4 +19,18 @@ const per = [
     { val: 4, text: 'Day' },
     { val: 5, text: 'Hour' },
 ]
-export { provinces, per }
+
+const provincesList = [
+    { val: 0, text: 'Alberta' },
+    { val: 1, text: 'British Columbia' },
+    { val: 2, text: 'Manitoba' },
+    { val: 3, text: 'New Brunswick' },
+    { val: 4, text: 'Newfoundland and Labrador' },
+    { val: 5, text: 'Nova Scotia' },
+    { val: 6, text: 'Ontario' },
+    { val: 7, text: 'Prince Edward Island' },
+    { val: 8, text: 'Quebec' },
+    { val: 9, text: 'Saskatchewan' },
+]
+export { provinces, per, provincesList }
+
