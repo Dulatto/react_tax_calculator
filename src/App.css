@@ -26,3 +26,6 @@
 .region {
   border-left: 5px solid #f6f6f9;
 }
+.other-results .border-bottom {
+  border-bottom: 1px solid #585858 !important;
+}
