@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStore } from '../store';
 import { PieChart } from 'react-minimal-pie-chart';
+import OtherResults from './OtherResults';
 
 const Results = () => {
     const [state, setState] = useStore();
@@ -76,6 +77,7 @@ const Results = () => {
             <div className="col-md-7 region bg-white">
                 <h5 className="fw-bold mt-2">Tax per region</h5>
                 <hr />
+                <OtherResults />
             </div>
         </div>
     );
