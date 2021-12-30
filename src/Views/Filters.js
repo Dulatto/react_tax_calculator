@@ -179,7 +179,12 @@ const Filters = () => {
         setState(old => ({ ...old, qpip: pension.toFixed(0) }));
         setState(old => ({ ...old, totalTax: nalog.toFixed(1) }));
         setState(old => ({ ...old, netPay: plata.toFixed(1) }));
+
+
+
+
     }
+
 
 
 

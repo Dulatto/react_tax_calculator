@@ -17,6 +17,8 @@ const appState = {
     netPay: 0,
     qpp: 0,
     qpip: 0,
+    averagePay: 0,
+    averageTax: 0,
     // timePeriod: 0,
 
     //...add your state
