@@ -44,34 +44,34 @@ const OtherResults = () => {
             <div className='col-4 border-bottom fw-bold mb-1'>Average Tax</div>
             <div className='col-5 border-bottom mb-1' >Alberta</div>
             <div className='col-3 border-bottom mb-1' >{state.albertaAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.albertaAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.albertaAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >British Columbia</div>
             <div className='col-3 border-bottom mb-1' >{state.bcAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.bcAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.bcAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Manitoba</div>
             <div className='col-3 border-bottom mb-1' >{state.manitobaAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.manitobaAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.manitobaAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >New Brunswick</div>
             <div className='col-3 border-bottom mb-1' >{state.brunswickAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.brunswickAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.brunswickAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Newfoundland and Labrador</div>
             <div className='col-3 border-bottom mb-1' >{state.nalAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.nalAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.nalAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Nova Scotia</div>
             <div className='col-3 border-bottom mb-1' >{state.scotiaAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.scotiaAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.scotiaAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Ontario</div>
             <div className='col-3 border-bottom mb-1' >{state.ontarioAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.ontarioAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.ontarioAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Prince Edward Island</div>
             <div className='col-3 border-bottom mb-1' >{state.peiAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.peiAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.peiAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Quebec</div>
             <div className='col-3 border-bottom mb-1' >{state.qcAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.qcAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.qcAverageTax} %</div>
             <div className='col-5 border-bottom mb-1' >Saskatchewan</div>
             <div className='col-3 border-bottom mb-1' >{state.saskAveragePay}</div>
-            <div className='col-3 border-bottom mb-1'>{state.saskAverageTax}</div>
+            <div className='col-3 border-bottom mb-1'>{state.saskAverageTax} %</div>
         </div>
     );
 };

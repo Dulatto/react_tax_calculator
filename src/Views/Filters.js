@@ -75,6 +75,11 @@ const Filters = () => {
                 plata = 100 - Number(nalog);
 
             }
+
+            setState(old => ({ ...old, albertaAveragePay: Number(calculateAnnual) - (Number(21.5) * Number(calculateAnnual) / 100) }));
+            setState(old => ({ ...old, albertaAverageTax: 21.5 }));
+            setState(old => ({ ...old, bcAveragePay: Number(calculateAnnual) - (Number(19.2) * Number(calculateAnnual) / 100) }));
+            setState(old => ({ ...old, bcAverageTax: 19.2 }));
         }
         if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
