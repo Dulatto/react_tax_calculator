@@ -76,10 +76,14 @@ const Filters = () => {
 
             }
 
-            setState(old => ({ ...old, albertaAveragePay: Number(calculateAnnual) - (Number(21.5) * Number(calculateAnnual) / 100) }));
+            setState(old => ({ ...old, albertaAveragePay: (Number(calculateAnnual) - (Number(21.5) * Number(calculateAnnual) / 100)).toFixed(0) }));
             setState(old => ({ ...old, albertaAverageTax: 21.5 }));
-            setState(old => ({ ...old, bcAveragePay: Number(calculateAnnual) - (Number(19.2) * Number(calculateAnnual) / 100) }));
+            setState(old => ({ ...old, bcAveragePay: (Number(calculateAnnual) - (Number(19.2) * Number(calculateAnnual) / 100)).toFixed(0) }));
             setState(old => ({ ...old, bcAverageTax: 19.2 }));
+            setState(old => ({ ...old, manitobaAveragePay: (Number(calculateAnnual) - (Number(23.8) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, manitobaAverageTax: 23.8 }));
+            setState(old => ({ ...old, brunswickAveragePay: (Number(calculateAnnual) - (Number(22.5) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, brunswickAverageTax: 22.5 }));
         }
         if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
