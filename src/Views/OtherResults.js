@@ -11,19 +11,25 @@ const OtherResults = () => {
     let area = provincesList.map((x, index) => {
         let pay;
         let tax;
-        if (state.annual <= 49000) {
-            if (index === 0) {
-                tax = 21.5;
-                pay = Number(tax) * Number(state.annual) / 100;
-
+        if (state.annual > 0) {
+            if (state.annual <= 49000) {
+                if (x.val === 0) {
+                    tax = 21.5;
+                    pay = Number(tax) * Number(state.annual) / 100;
+                }
+                if (x.val === 1) {
+                    tax = 19.2;
+                    pay = Number(tax) * Number(state.annual) / 100;
+                }
             }
+            setState(old => ({ ...old, averagePay: pay }));
+            setState(old => ({ ...old, averageTax: tax }));
         }
-
         return (
             <>
-                <div className='col-5 border-bottom mb-1' key={index}>{x.text}</div>
-                <div className='col-3 border-bottom mb-1' >{state.averagePay}</div>
-                <div className='col-3 border-bottom mb-1' >{state.averageTax}</div>
+                <div className='col-5 border-bottom mb-1' >{x.text}</div>
+                <div className='col-3 border-bottom mb-1' index={x.val}>{state.averagePay}</div>
+                <div className='col-3 border-bottom mb-1' index={x.val}>{state.averageTax}</div>
             </>
         )
     })
