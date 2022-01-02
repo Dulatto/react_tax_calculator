@@ -84,6 +84,8 @@ const Filters = () => {
             setState(old => ({ ...old, manitobaAverageTax: 23.8 }));
             setState(old => ({ ...old, brunswickAveragePay: (Number(calculateAnnual) - (Number(22.5) * Number(calculateAnnual) / 100)).toFixed(0) }));
             setState(old => ({ ...old, brunswickAverageTax: 22.5 }));
+            setState(old => ({ ...old, nalAveragePay: (Number(calculateAnnual) - (Number(22.8) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, nalAverageTax: 22.8 }));
         }
         if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
