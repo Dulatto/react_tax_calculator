@@ -88,6 +88,8 @@ const Filters = () => {
             setState(old => ({ ...old, nalAverageTax: 22.8 }));
             setState(old => ({ ...old, scotiaAveragePay: (Number(calculateAnnual) - (Number(24.3) * Number(calculateAnnual) / 100)).toFixed(0) }));
             setState(old => ({ ...old, scotiaAverageTax: 24.3 }));
+            setState(old => ({ ...old, ontarioAveragePay: (Number(calculateAnnual) - (Number(20.1) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, ontarioAverageTax: 20.1 }));
         }
         if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
