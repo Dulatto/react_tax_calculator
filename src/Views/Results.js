@@ -17,7 +17,7 @@ const Results = () => {
 
 
     const total = Number(state.fedTax) + Number(state.provTax) + Number(state.cppDeduction) + Number(state.eiDeduction);
-    const pay = Number(state.salary) - Number(total);
+    const pay = Number(state.annual) - ((Number(state.totalTax) * Number(state.annual) / 100));
 
     const shiftSize = 2;
     const defaultLabelStyle = {
