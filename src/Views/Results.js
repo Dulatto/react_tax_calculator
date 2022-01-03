@@ -57,7 +57,7 @@ const Results = () => {
                     <div className="col-md-8 fw-bold">Total tax</div>
                     <div className="col-md-4 fw-bold text-end">- ${total}</div>
                     <div className="col-md-8 fw-bold">Net pay</div>
-                    <div className="col-md-4 fw-bold mb-2 text-end">${pay}</div>
+                    <div className="col-md-4 fw-bold mb-2 text-end">${pay.toFixed(0)}</div>
 
                     {state.fedTax > 0 ?
                         <PieChart
