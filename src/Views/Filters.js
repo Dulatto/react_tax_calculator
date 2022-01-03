@@ -90,6 +90,12 @@ const Filters = () => {
             setState(old => ({ ...old, scotiaAverageTax: 24.3 }));
             setState(old => ({ ...old, ontarioAveragePay: (Number(calculateAnnual) - (Number(20.1) * Number(calculateAnnual) / 100)).toFixed(0) }));
             setState(old => ({ ...old, ontarioAverageTax: 20.1 }));
+            setState(old => ({ ...old, peiAveragePay: (Number(calculateAnnual) - (Number(23.6) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, peiAverageTax: 23.6 }));
+            setState(old => ({ ...old, qcAveragePay: (Number(calculateAnnual) - (Number(25.1) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, qcAverageTax: 25.1 }));
+            setState(old => ({ ...old, saskAveragePay: (Number(calculateAnnual) - (Number(21.6) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, saskAverageTax: 21.6 }));
         }
         if (calculateAnnual > 49000 && calculateAnnual <= 98020) {
             if (state.position === '0' || state.position === 0) {
@@ -114,6 +120,26 @@ const Filters = () => {
                 plata = 100 - Number(nalog);
 
             }
+            setState(old => ({ ...old, albertaAveragePay: (Number(calculateAnnual) - (Number(26.61) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, albertaAverageTax: 26.61 }));
+            setState(old => ({ ...old, bcAveragePay: (Number(calculateAnnual) - (Number(24.9) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, bcAverageTax: 19.2 }));
+            setState(old => ({ ...old, manitobaAveragePay: (Number(calculateAnnual) - (Number(23.8) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, manitobaAverageTax: 23.8 }));
+            setState(old => ({ ...old, brunswickAveragePay: (Number(calculateAnnual) - (Number(22.5) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, brunswickAverageTax: 22.5 }));
+            setState(old => ({ ...old, nalAveragePay: (Number(calculateAnnual) - (Number(22.8) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, nalAverageTax: 22.8 }));
+            setState(old => ({ ...old, scotiaAveragePay: (Number(calculateAnnual) - (Number(24.3) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, scotiaAverageTax: 24.3 }));
+            setState(old => ({ ...old, ontarioAveragePay: (Number(calculateAnnual) - (Number(20.1) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, ontarioAverageTax: 20.1 }));
+            setState(old => ({ ...old, peiAveragePay: (Number(calculateAnnual) - (Number(23.6) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, peiAverageTax: 23.6 }));
+            setState(old => ({ ...old, qcAveragePay: (Number(calculateAnnual) - (Number(25.1) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, qcAverageTax: 25.1 }));
+            setState(old => ({ ...old, saskAveragePay: (Number(calculateAnnual) - (Number(21.6) * Number(calculateAnnual) / 100)).toFixed(0) }));
+            setState(old => ({ ...old, saskAverageTax: 21.6 }));
         }
         if (calculateAnnual > 98020 && calculateAnnual <= 152020) {
             if (state.position === '0' || state.position === 0) {
